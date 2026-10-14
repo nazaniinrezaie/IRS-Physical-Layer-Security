@@ -29,3 +29,40 @@ The plot is saved to `results/trajectory.png`. The terminal reports observation 
 ## Academic context
 
 The thesis studied physical-layer security in the presence of a mobile eavesdropper, using location estimation, reconfigurable intelligent surfaces, artificial noise, and optimization. This repository currently demonstrates **only the tracking component**.
+
+
+## IRS Phase Optimization
+
+This project includes a simplified IRS phase optimization
+simulation using Python and NumPy.
+
+A random-search algorithm evaluates 2,000 candidate phase
+configurations for a 16-element Intelligent Reflecting
+Surface (IRS).
+
+The objective is to maximize the simulated secrecy rate
+by improving the legitimate receiver's channel relative
+to the eavesdropper's channel.
+
+### Simulation Results
+
+| Metric | Value |
+|---|---|
+| Baseline secrecy rate | 0.9760 bits/s/Hz |
+| Optimized secrecy rate | 4.7581 bits/s/Hz |
+| Absolute improvement | 3.7820 bits/s/Hz |
+
+![IRS Optimization Results](results/irs_optimization.png)
+
+### Model Limitations
+
+This is a simplified, fixed-channel simulation using
+random-search optimization.
+
+It does not yet integrate mobile eavesdropper tracking,
+artificial noise, or joint power and phase optimization.
+
+The results are from a new educational implementation
+inspired by the MSc thesis, not a reproduction of the
+original thesis results.
+
